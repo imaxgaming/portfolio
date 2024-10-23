@@ -181,7 +181,7 @@ p{
     position: absolute;
     left: -10%;
     transform: translateX(-50);
-    bottom: 40px;
+    bottom: 25px;
 }
 
 /* skill section */
@@ -298,6 +298,36 @@ p{
 }
 
 /* Resume section */
+.resume-container {
+    display: grid;
+}
+.resume-card{
+    width: 20rem;
+    height: 25rem;
+    /* background: red; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+.resume-card::before{
+    content: "";
+    background: var(--black);
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+.resume-card:hover::before{
+    opacity: .8;
+}
+.resume-card:hover .demo{
+    top: 50%;
+}
+.resume-card:nth-child(1){
+    background-image: url("assets/sample-resume.png");
+}
 
 
 /* Contact us section */
